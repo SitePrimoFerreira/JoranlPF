@@ -1,0 +1,1006 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700;1,6..72,800&display=swap");
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--banner-color);
+}
+
+:root {
+  --header-color: #7db2fc;
+  --banner-color: #fd887b;
+  --card-background: #000;
+  --header-title: "Rampart One", cursive;
+  --noticia-title: "Josefin Sans", sans-serif;
+  --font-text: "Newsreader", serif;
+  --text-header: #373435;
+  --text-color: #fff;
+  --contorno: 1px 0px black, 0px 1px black, -1px 0px black, 0px -1px black;
+  --lin-destaque: #95ffc8;
+  --cite-line-color: #7db2fc;
+  --chat-color1: #a6c7f5;
+  --chat-color2: #7b6fd3;
+  --chat-color3: #ff6f6f;
+  --chat-color4: rgb(139, 255, 160);
+}
+
+header { /* Aréa do Logo e da Navegação */
+  position: relative;
+  background-color: var(--header-color);
+  box-shadow: inset 0 -1px 6px black;
+}
+header #area-logo { /* Configurações do Logo*/
+  position: relative;
+  display: flex;
+}
+header #area-logo #div-logo { /* Aréa do Logo/banner */
+  background-color: var(--banner-color);
+  height: 25em;
+  width: 22.5em;
+  margin: 0 0 1em 4em;
+  border-radius: 0px 0px 40% 40%;
+  box-shadow: 0 2px 8px black;
+}
+header #area-logo #div-logo img { /* Configuração das imagens dentro da bandeira*/
+  display: block;
+  margin: 2rem auto;
+  width: 18rem;
+  height: 18rem;
+}
+header #area-logo #area-text-logo {
+  width: 35vw;
+  margin: -2rem auto 0;
+  font-family: var(--header-title);
+  color: var(--text-header);
+  font-size: 4rem;
+}
+header #area-logo #area-text-logo #title-logo-dois {
+  margin-top: -10rem;
+  text-align: right;
+}
+header #area-logo #area-text-logo p {
+  font-size: 1.6rem;
+  margin: -6rem -6rem;
+  width: auto;
+}
+header #area-logo #edicao {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--banner-color);
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.453);
+  width: 2rem;
+  height: 2.2rem;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  color: var(--header-color);
+  text-shadow: var(--contorno);
+  text-align: center;
+}
+header #area-logo #edicao h1 {
+  margin: -0.6rem 0 0;
+}
+header #area-logo #data {
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0.4rem;
+  margin: 0;
+  color: var(--banner-color);
+  font-size: 0.8rem;
+  text-shadow: var(--contorno);
+  letter-spacing: 2px;
+}
+
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: var(--header-color);
+  height: 3rem;
+  box-shadow: 0 2px 6px black;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0;
+}
+nav ul li {
+  margin-top: 1rem;
+}
+nav ul li a {
+  color: var(--text-color);
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-shadow: var(--contorno);
+  padding: 0.5rem 1rem;
+}
+nav ul li a:hover {
+  color: var(--banner-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+nav h1 {
+  display: none;
+}
+nav #BtnMenujs {
+  display: none;
+}
+
+#subnav {
+  height: 1.8rem;
+  top: 3rem;
+}
+#subnav ul li {
+  margin-top: 0.5rem;
+}
+#subnav ul li a {
+  color: var(--text-color);
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-shadow: var(--contorno);
+  padding: 0.5rem 1rem;
+}
+#subnav ul li a:hover {
+  color: var(--banner-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.Categoria-title {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 3rem;
+  font-family: var(--header-title);
+  color: var(--text-header);
+  font-size: 6rem;
+  text-align: center;
+}
+
+#destaques {
+  display: grid;
+  width: 90%;
+  margin: 2rem auto;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "item1 item2" "item1 item3";
+}
+#destaques a {
+  text-decoration: none;
+  color: white;
+}
+#destaques a:hover h1 {
+  text-decoration: underline;
+}
+#destaques .card {
+  position: relative;
+  margin: 5px;
+  background-color: var(--header-color);
+  text-align: center;
+  font-size: 1.2em;
+  border: 1px solid black;
+  box-shadow: 0 1px 7px black;
+}
+#destaques #item1 {
+  grid-area: item1;
+  height: 35rem;
+}
+#destaques #item2 {
+  grid-area: item2;
+}
+#destaques #item3 {
+  grid-area: item3;
+}
+#destaques .card-info {
+  color: var(--text-color);
+  background-color: var(--header-color);
+}
+#destaques .card-info img {
+  height: 28rem;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+#destaques .card-info .info-text {
+  width: 100%;
+  height: 5.8rem;
+}
+#destaques .card-info .info-text h1 {
+  text-shadow: var(--contorno);
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+#destaques .subcard-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 95%;
+  color: white;
+  text-shadow: var(--contorno);
+  font-size: 1.3rem;
+}
+
+.div-categoria {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--header-color);
+  color: white;
+  text-shadow: var(--contorno);
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  z-index: 2;
+}
+
+#materias {
+  padding-top: 2rem;
+  border-top: 1px solid black;
+}
+
+.Materia {
+  width: 90%;
+  margin: 0 auto 1.5rem;
+}
+.Materia a {
+  background-color: var(--header-color);
+  display: flex;
+  position: relative;
+  border: 1px solid black;
+  box-shadow: 0 1px 6px black;
+  margin: 0 auto 1.5rem;
+  text-decoration: none;
+}
+.Materia a .img {
+  width: 20rem;
+  max-height: 20rem;
+}
+.Materia a .img img {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid black;
+}
+.Materia a h1 {
+  width: 70%;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  text-shadow: var(--contorno);
+  color: var(--text-color);
+  letter-spacing: 1px;
+}
+.Materia a:hover h1::after {
+  content: "[ Veja Mais ]";
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgb(209, 209, 209);
+  text-decoration: underline;
+}
+
+form {
+  width: 95%;
+  margin: 2rem auto;
+  text-align: center;
+}
+form label {
+  display: block;
+  margin: 2rem 0 1rem;
+  color: white;
+  font-size: 3rem;
+  text-shadow: var(--contorno);
+}
+form input,
+form textarea {
+  width: 45%;
+  height: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px -5px black;
+  border: 1px solid black;
+}
+form textarea {
+  margin-bottom: 2.5rem;
+  height: 16rem;
+}
+form #form-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+form #form-btns input {
+  width: auto;
+  padding: 0.5rem 1rem;
+}
+form #form-btns input:hover {
+  background-color: var(--header-color);
+  cursor: pointer;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 2px solid var(--header-color);
+}
+
+#noticia {
+  position: relative;
+  width: 90%;
+  margin: 0 auto 6rem;
+}
+#noticia h1 {
+  font-size: var(--noticia-title);
+  margin: 4rem 0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: var(--text-color);
+  text-shadow: var(--contorno);
+}
+#noticia h3 {
+  font-size: 2rem;
+}
+#noticia #por {
+  text-align: right;
+  width: 90%;
+  margin-top: -3em;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#noticia #por::before {
+  content: "Por ";
+}
+#noticia img {
+  display: block;
+  margin: 1rem auto 3rem;
+  max-width: 60%;
+  overflow-y: hidden;
+  border: 1px solid black;
+  box-shadow: 0 1px 10px black;
+}
+#noticia p {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-family: var(--font-text);
+}
+#noticia cite {
+  display: block;
+  width: 85%;
+  padding: 1rem 2rem;
+  margin: 0 auto 2rem;
+  background-color: rgba(0, 0, 0, 0.0941176471);
+  border-left: 10px solid var(--cite-line-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+#noticia ul li {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+#noticia ul .titulo-lista {
+  font-size: 2rem;
+  margin: 1rem auto 2rem;
+}
+#noticia ul .negativo {
+  color: rgb(100, 0, 0);
+}
+#noticia ul .positivo {
+  color: rgb(58, 201, 58);
+}
+#noticia ul.chat {
+  background-color: var(--chat-color1);
+  padding: 0;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 0px 5px 15px black;
+  list-style: none;
+}
+#noticia ul.chat #convidado {
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2.8rem;
+  width: 100%;
+  height: auto;
+  padding-top: 0.5rem;
+  border-bottom: 1px solid black;
+  border-radius: 15px 15px 0 0;
+  background-color: var(--chat-color4);
+  margin-bottom: 0;
+  text-align: center;
+}
+#noticia ul.chat #convidado h2 {
+  margin: 0 1.6rem 0.5rem;
+}
+#noticia ul.chat li {
+  font-size: 1.2rem;
+  max-width: 55%;
+  max-height: 50%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 0px 4px 15px black;
+}
+#noticia ul.chat li h2 {
+  font-size: 1.4rem;
+  margin: 0.2rem 0.1rem;
+}
+#noticia ul.chat li p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 1rem 0.1rem;
+  text-align: justify;
+  color: white;
+  text-shadow: var(--contorno);
+}
+#noticia ul.chat li:nth-child(odd) {
+  background-color: var(--chat-color2);
+  margin-left: 2%;
+}
+#noticia ul.chat li:nth-child(even) {
+  background-color: var(--chat-color3);
+  margin-left: 40%;
+}
+#noticia .forte {
+  font-weight: bold;
+}
+#noticia .destacar {
+  color: white;
+}
+#noticia .marca {
+  display: block;
+  font-size: 1.6rem;
+}
+#noticia #equipes h1 {
+  color: white;
+  font-weight: bold;
+  text-shadow: var(--contorno);
+  font-size: 2.5rem;
+}
+#noticia #equipes .equipe {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "img-perfil txt-perfil" "img-perfil txt-perfil";
+  height: auto;
+  width: 80%;
+  margin: 3.5em auto 1.5em;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: var(--cite-line-color);
+  box-shadow: 0 4px 12px black;
+  padding: 1rem 2rem 2rem;
+}
+#noticia #equipes .equipe .foto-equipe {
+  grid-area: img-perfil;
+  border-radius: 100%;
+  min-width: 14rem;
+  max-height: 16rem;
+  margin-right: 3rem;
+}
+#noticia #equipes .equipe .texto-equipe {
+  grid-area: txt-perfil;
+}
+#noticia #equipes .equipe .texto-equipe h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8em;
+}
+#noticia #equipes .equipe .texto-equipe ul {
+  list-style: none;
+  font-size: 8em;
+  margin: 0;
+}
+#noticia #equipes .equipe .texto-equipe ul li {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.lin-destaque {
+  color: var(--lin-destaque);
+}
+
+@media screen and (max-width: 992px) {
+  header { /* Aréa do Logo e da Navegação */ }
+  header #area-logo { /* Configurações do Logo*/ }
+  header #area-logo #div-logo { /* Aréa do Logo/banner */
+    height: 15rem;
+    width: 15.5rem;
+    margin: 0 0 1rem 4rem;
+  }
+  header #area-logo #div-logo img { /* Configuração das imagens dentro da bandeira*/
+    margin: 1rem auto;
+    width: 12rem;
+    height: 12rem;
+  }
+  header #area-logo #area-text-logo {
+    width: 30vw;
+    margin: -3rem auto;
+    font-size: 2.5rem;
+  }
+  header #area-logo #area-text-logo #title-logo-dois {
+    margin-top: -6rem;
+  }
+  header #area-logo #area-text-logo p {
+    font-size: 1rem;
+    margin: -4rem -5rem;
+  }
+  nav ul {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+  nav ul li {
+    margin-top: 1rem;
+  }
+  nav ul li a {
+    padding: 0.5rem 0;
+    font-size: 0.6rem;
+  }
+  nav h1 {
+    display: none;
+  }
+  #destaques {
+    margin: 2rem auto;
+  }
+  #destaques .card {
+    position: relative;
+    margin: 5px;
+    background-color: var(--header-color);
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    box-shadow: 0 1px 7px black;
+  }
+  #destaques #item1 {
+    height: 25rem;
+  }
+  #destaques .card-info img {
+    height: 17rem;
+    width: 100%;
+  }
+  #destaques .card-info .info-text {
+    width: 100%;
+    height: 8.3rem;
+  }
+  #destaques .card-info .info-text h1 {
+    width: 90%;
+    height: 85%;
+    margin-top: 0.5rem;
+    font-size: 1.6rem;
+  }
+  #destaques .subcard-info {
+    font-size: 1rem;
+  }
+  .div-categoria {
+    padding: 0.5rem 1rem;
+  }
+  .Materia a .img {
+    width: 40%;
+    height: 10rem;
+  }
+  .Materia a .img img {
+    width: 100%;
+    height: 100%;
+  }
+  .Materia a h1 {
+    width: 55%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  #noticia #por {
+    font-size: 1rem;
+  }
+  #noticia #equipes h1 {
+    font-size: 2.5rem;
+  }
+  #noticia #equipes .equipe {
+    margin: 3.5em auto 1.5em;
+    padding: 1rem 2rem 2rem;
+  }
+  #noticia #equipes .equipe .foto-equipe {
+    margin-right: 3rem;
+  }
+  #noticia #equipes .equipe .texto-equipe h3 {
+    margin-bottom: 1rem;
+    font-size: 2em;
+  }
+  #noticia #equipes .equipe .texto-equipe ul {
+    font-size: 1.2em;
+  }
+  #noticia #equipes .equipe .texto-equipe ul li {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  header { /* Aréa do Logo e da Navegação */ }
+  header #area-logo { /* Configurações do Logo*/ }
+  header #area-logo #div-logo { /* Aréa do Logo/banner */
+    height: 8rem;
+    width: 7.5rem;
+    margin: 0 0 1rem 2em;
+  }
+  header #area-logo #div-logo img { /* Configuração das imagens dentro da bandeira*/
+    width: 6rem;
+    height: 6rem;
+  }
+  header #area-logo #area-text-logo {
+    width: 10rem;
+    padding-bottom: 4rem;
+    margin: -1rem auto;
+    font-size: 1.4rem;
+  }
+  header #area-logo #area-text-logo #title-logo-dois {
+    margin-top: -3rem;
+  }
+  header #area-logo #area-text-logo p {
+    font-size: 0.9rem;
+    margin: -2rem -7rem;
+    width: auto;
+  }
+  header #area-logo #edicao {
+    width: 1rem;
+    height: 1.2rem;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  header #area-logo #data {
+    bottom: 0.2rem;
+    left: 0.4rem;
+    margin: 0;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+  nav ul {
+    background-color: var(--header-color);
+    display: block;
+    overflow-x: hidden;
+    visibility: hidden;
+    top: 6.1rem;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 3px;
+    transition: 1.2s;
+  }
+  nav ul li {
+    margin: 2.4rem auto 0;
+  }
+  nav ul li a {
+    padding: 1.5rem 1rem;
+    letter-spacing: 2px;
+    text-shadow: var(--contorno);
+    font-size: 1.2rem;
+  }
+  nav h1 {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--banner-color);
+    text-shadow: var(--contorno);
+  }
+  nav #BtnMenujs {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+  nav #BtnMenujs p {
+    font-size: 1.6rem;
+    margin: 0.4rem 0.6rem;
+  }
+  nav #BtnMenujs .icon {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
+  #subnav {
+    display: flex;
+    overflow-x: none;
+    visibility: visible;
+    height: 2rem;
+  }
+  #subnav ul {
+    display: flex;
+    visibility: visible;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .Categoria-title {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto 3rem;
+    font-family: var(--header-title);
+    color: var(--text-header);
+    font-size: 3rem;
+    text-align: center;
+  }
+  .active ul {
+    visibility: visible;
+    height: 100vh;
+  }
+  #destaques {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr;
+    grid-template-areas: "item1 item1" "item2 item3";
+    margin: 2rem auto;
+  }
+  #destaques .card {
+    position: relative;
+    margin: 5px;
+    background-color: var(--header-color);
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    box-shadow: 0 1px 7px black;
+  }
+  #destaques #item1 {
+    height: 18rem;
+  }
+  #destaques .card-info img {
+    height: 14rem;
+    width: 100%;
+  }
+  #destaques .card-info .info-text {
+    width: 100%;
+    height: 3.5rem;
+  }
+  #destaques .card-info .info-text h1 {
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+  #destaques .subcard-info {
+    font-size: 0.5rem;
+    margin: 0 auto;
+  }
+  .div-categoria {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .Materia a .img {
+    width: 35%;
+    height: 7rem;
+  }
+  .Materia a .img img {
+    width: 95%;
+    height: 7rem;
+  }
+  .Materia a h1 {
+    width: 55%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 0.58rem;
+  }
+  form label {
+    font-size: 2rem;
+  }
+  form input,
+form textarea {
+    width: 75%;
+    font-size: 1.6rem;
+  }
+  form textarea {
+    margin-bottom: 2.5rem;
+    height: 16rem;
+  }
+  #noticia h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  #noticia #por {
+    font-size: 1em;
+  }
+  #noticia p {
+    font-size: 1.4rem;
+  }
+  #noticia #equipes h1 {
+    font-size: 2.5rem;
+  }
+  #noticia #equipes .equipe {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img-perfil img-perfil" "txt-perfil txt-perfil";
+    margin: 3.5em auto 1.5em;
+    padding: 1rem 2rem;
+  }
+  #noticia #equipes .equipe .foto-equipe {
+    min-width: 12rem;
+    max-height: 12rem;
+    margin: 2rem auto;
+  }
+  #noticia #equipes .equipe .texto-equipe h3 {
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+    max-width: 90%;
+  }
+  #noticia #equipes .equipe .texto-equipe ul {
+    padding-left: 1rem;
+  }
+  #noticia #equipes .equipe .texto-equipe ul li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  #noticia ul.chat #convidado h2 {
+    margin: 0 1.6rem 0.5rem;
+  }
+  #noticia ul.chat li {
+    max-width: 52.5%;
+  }
+  #noticia ul.chat li h2 {
+    font-size: 1.2rem;
+  }
+  #noticia ul.chat li p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  header { /* Aréa do Logo e da Navegação */ }
+  header #area-logo { /* Configurações do Logo*/ }
+  header #area-logo #div-logo { /* Aréa do Logo/banner */
+    height: 8rem;
+    width: 6.5rem;
+    margin: 0 0 1rem 2em;
+  }
+  header #area-logo #div-logo img { /* Configuração das imagens dentro da bandeira*/
+    width: 6rem;
+    height: 6rem;
+  }
+  header #area-logo #area-text-logo {
+    margin: -1.6rem auto;
+    font-size: calc(1rem + 1vw);
+    width: calc(12rem - 10vw);
+    padding-bottom: 3rem;
+  }
+  header #area-logo #area-text-logo #title-logo-dois {
+    margin-top: -2.6rem;
+  }
+  header #area-logo #area-text-logo p {
+    font-size: calc(0.3rem + 1vw);
+    margin: -1.5rem 0.4rem 0 0;
+  }
+  header #area-logo #edicao {
+    right: 1.5em;
+    width: 0.5rem;
+    height: 0.7rem;
+    padding: 0.5rem;
+    font-size: 0.6em;
+  }
+  header #area-logo #edicao h1 {
+    margin: -0.3rem -0.1rem 0;
+  }
+  nav ul {
+    background-color: var(--header-color);
+    display: block;
+    overflow-x: hidden;
+    visibility: hidden;
+    top: 4.1rem;
+    left: 0;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 3px;
+    transition: 1.2s;
+  }
+  nav ul li {
+    margin: 2.4rem auto 0;
+  }
+  nav ul li a {
+    padding: 1.5rem 1rem;
+    letter-spacing: 2px;
+    text-shadow: var(--contorno);
+    font-size: 1.2rem;
+  }
+  nav h1 {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--banner-color);
+    text-shadow: var(--contorno);
+  }
+  nav #BtnMenujs {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: white;
+  }
+  nav #BtnMenujs p {
+    font-size: 1.6rem;
+    margin: 0.4rem 0.6rem;
+  }
+  nav #BtnMenujs .icon {
+    font-size: 2rem;
+    margin: 0.5rem;
+  }
+  .active ul {
+    visibility: visible;
+    height: 100vh;
+  }
+  #destaques {
+    margin: 2rem auto;
+  }
+  #destaques .card {
+    position: relative;
+    margin: 5px;
+    background-color: var(--header-color);
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    box-shadow: 0 1px 7px black;
+  }
+  #destaques .card-info img {
+    height: 11rem;
+    width: 100%;
+  }
+  #destaques .card-info .info-text {
+    width: 100%;
+    height: 3.5rem;
+  }
+  #destaques .card-info .info-text h1 {
+    width: 90%;
+    height: auto;
+    font-size: 1.2rem;
+  }
+  #destaques .subcard-info {
+    font-size: 0.5rem;
+    width: 90%;
+  }
+  #noticia {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 6rem;
+  }
+  #noticia h1 {
+    font-size: 2rem;
+  }
+  #noticia #por {
+    font-size: 0.8rem;
+  }
+  #noticia p {
+    font-size: 1.3rem;
+  }
+  #noticia #equipes h1 {
+    font-size: 2rem;
+  }
+  #noticia #equipes .equipe .foto-equipe {
+    min-width: 8rem;
+    max-height: 8rem;
+    margin: 1rem auto;
+  }
+  #noticia #equipes .equipe .texto-equipe h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+  #noticia #equipes .equipe .texto-equipe ul {
+    padding-left: 1rem;
+  }
+  #noticia #equipes .equipe .texto-equipe ul li {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  #noticia ul.chat #convidado h2 {
+    margin: 0 1.6rem 0.5rem;
+    font-size: 1rem;
+  }
+  #noticia ul.chat li {
+    max-width: 50%;
+  }
+  #noticia ul.chat li h2 {
+    font-size: 1rem;
+  }
+  #noticia ul.chat li p {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=Index.css.map */
